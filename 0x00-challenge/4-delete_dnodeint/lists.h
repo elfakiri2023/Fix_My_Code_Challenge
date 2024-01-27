@@ -4,24 +4,24 @@
 #include <stddef.h>
 
 /**
- * struct dlistint_s - doubly list
- * @n: number
- * @prev: previous node
- * @next: next node
+ * struct dlistint_s - doubly linked list
+ * @n: integer
+ * @prev: points to the prev node
+ * @next: points to the next node
  *
  * Description: doubly linked list node structure
+ * for Holberton project
  */
 typedef struct dlistint_s
 {
 	int n;
 	struct dlistint_s *prev;
 	struct dlistint_s *next;
-} initlist_t;
+} dlistint_t;
 
-initlist_t *add_to_end(initlist_t **head, const int n);
-size_t initlist_print(const initlist_t *h);
-int delete_at_index(initlist_t **head, unsigned int index);
-void free_list(initlist_t *head);
+size_t print_dlistint(const dlistint_t *h);
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+void free_dlistint(dlistint_t *head);
 
 #endif
-
